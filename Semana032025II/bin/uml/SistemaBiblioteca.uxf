@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>153</y>
+      <w>180</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Biblioteca
+--
+- nombre: String
+- ubicacion: String
+- id : int
+--
++ Biblioteca() : Biblioteca
++ getNombre() : String
++ setNombre(String) : void
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>135</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>RecursoDigital
+--
+- id : int
+- titulo : String
+- fechaPublicacion : Date
+- biblioteca : Biblioteca
+--
++ RecursoDigital() : RecursoDigital
++ getId() : int
++ setId(int) : void
++ mostrarInformacion() : String
++ descargar() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>243</y>
+      <w>234</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>LibroElectronico
+--
+- nombreAutor : String
+- cantidadPaginas : int
+- codigoISBN : String
+--
++ LibroElectronico() : LibroElectronico
++ getNombreAutor() : String
++ setNombreAutor(String) : void
++ mostrarInformacion() : String
++ descargar() : void
++ leerFragmento() : void
++ calcularSize() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>0</y>
+      <w>252</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>VideoEducativo
+--
+- duracionMinuto : double
+- resolucionVideo : String
+- formatoArchivo : String
+--
++ VideoEducativo() : VideoEducativo
++ getDuracionMinuto() : double
++ setDuracionMinuto(double) : void
++ mostrarInformacion() : String
++ descargar() : void
++ reproducir() : void
++ detener() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>441</y>
+      <w>216</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Prestamo
+--
+- fechaPrestamo : Date
+- fechaDevolucion : Date
+- estadoPrestamo : String
+- usuario : Usuario
+- recursoDigital : RecursoDigital
+--
++ Prestamo() : Prestamo
++ getFechaPrestamo() : Date
++ setFechaPrestamo(Date) : void
++ iniciarPrestamo() : void
++ finalizarPrestamo() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>450</y>
+      <w>216</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+- tipoUsuario : String
+- numeroSocio : int
+- nombreCompleto : String
+- email : String
+--
++ Usuario() : Usuario
++ getNumeroSocio() : int
++ setNumeroSocio(int) : void
++ registrarse() : void
++ consultaHistorial() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>207</y>
+      <w>126</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>54</y>
+      <w>117</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>297</y>
+      <w>27</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>171</x>
+      <y>216</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>522</y>
+      <w>153</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
