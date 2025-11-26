@@ -1,0 +1,2 @@
+Residencia:---> [151551|casa|858]
+Residencia:---> [444|trabajo|777]
